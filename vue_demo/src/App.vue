@@ -6,11 +6,11 @@
    </div>
 </template>
 <script>
-  //1. 引入组件
+  // 1. 引入组件
   import HelloWorld from './components/HelloWorld.vue'
 
   export default {
-     //2. 映射组件标签
+     // 2. 映射组件标签
      components: {
          HelloWorld
      }
