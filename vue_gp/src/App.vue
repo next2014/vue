@@ -1,13 +1,38 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view/>
+    <List :comments="comments"/>
+    <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
+import List from './components/List.vue'
 export default {
-  name: 'App'
+    data () {
+       return {
+         comments: [
+           {
+            name: '海洋世界',
+            price: 12
+           },
+           {
+            name: '卡丁车',
+            price: 12
+           },
+           {
+            name: '欧欧之家',
+            price: 12
+           }
+         ]
+       }
+
+    },
+
+    components: {
+        List
+    }
+    
 }
 </script>
 
