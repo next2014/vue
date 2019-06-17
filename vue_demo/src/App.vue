@@ -3,7 +3,7 @@
    <div class="todo-wrap">
      <TodoHeader :addTodo="addTodo"/>
      <TodoList :todos="todos"/>
-    <TodoFooter/>
+     <TodoFooter/>
    </div>
   </div>
 </template>
@@ -17,9 +17,9 @@ export default {
   data () {
     return {
       todos: [
-        {title: '吃饭', complete: false},
-        {title: '睡觉', complete: true},
-        {title: 'coding', complete: false}
+        {title: '欧欧之家', complete: false},
+        {title: '卡丁车', complete: true},
+        {title: '海洋世界', complete: false}
       ]
     }
   },
@@ -39,14 +39,14 @@ export default {
 </script>
 
 <style>
-  /*app*/
-  .todo-container {
-    width: 600px;
-    margin: 0 auto;
-  }
-  .todo-container .todo-wrap {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
+/*app*/
+.todo-container {
+  width: 600px;
+  margin: 0 auto;
+}
+.todo-container .todo-wrap {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 </style>
