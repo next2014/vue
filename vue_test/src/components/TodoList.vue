@@ -1,19 +1,18 @@
 <template>
-  <ul class="todo-main">
-    <TodeItem v-for="(todo, index) in todos" :key="index" :todo="todo" :index="index" :deleteTodo="deleteTodo"/>
-  </ul>
+      <ul class="todo-main">
+        <TodoList v-for="(todo, index) in todos" :key="index" :todo="todo" :index="index" />
+      </ul>
 </template>
 
 <script>
-import TodeItem from './TodoItem.vue'
+import TodoList from './TodoItem.vue'
 export default {
   props: {
-    todos: Array,
-    deleteTodo: Function
+    todos: Array
   },
 
   components: {
-    TodeItem
+    TodoList
   }
 }
 </script>
