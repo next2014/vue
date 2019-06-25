@@ -52,8 +52,8 @@
      },
 
      components: {
-          Add,
-          List
+        Add,
+        List
      }
     
  }
