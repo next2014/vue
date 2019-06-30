@@ -1,9 +1,9 @@
 {
    "pages": [
+      "pages/list/main",
       "pages/index/main"
    ],
    "window": {
-     "navigationBarBackgroundColor": "#8ed145",
-     "navigationBarTitleText": "欧美城"
+     "navigationBarBackgroundColor": "#489B81"
    }
 }
