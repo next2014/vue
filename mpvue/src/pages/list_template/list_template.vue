@@ -1,22 +1,27 @@
 <template>
    <div class="tmpContainer">
      <div class="avatar_date">
-         <img src="/static/images/avatar/0.png" alt="">
-         <span>2019</span>
+         <img :src="item.avatar" alt="">
+         <span>{{item.date}}</span>
      </div>
-     <p class="company">欧美城</p>
-     <img class="detail_img" src="/static/images/index/cart.jpg" alt="">
-     <p class="content">欧美城欧美城欧美城欧美城欧美城欧美城欧美城欧美城欧美城欧美城欧美城欧美城欧美城</p>
+     <p class="company">{{item.title}}</p>
+     <img class="detail_img" src="item.detail_img" alt="">
+     <p class="content">{{item.detail_content}}</p>
      <div class="view_star_container">
          <img src="/static/images/icon/star.png" alt="">
-         <span>66</span>
+         <span>{{item.love_count}}</span>
          <img src="/static/images/icon/view.png" alt="">
-         <span>88</span>
+         <span>{{item.attention_count}}</span>
      </div>
    </div>
 </template>
 <script>
-export default {}
+export default {
+  props: [
+    'item',
+    'index'
+  ]
+}
 </script>
 
 <style>

@@ -15,16 +15,23 @@
     </swiper-item>
    </swiper>
    <div>
-     <ListTmp />
+     <ListTmp v-for="(item, index) in listTmp" :key="index" :item="item" :index="index" />
    </div>
   </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
 import ListTmp from '../list_template/list_template.vue'
 export default {
   components: {
     ListTmp
+  },
+  beforeMount () {
+    this.$store.dispatch('getList')
+  },
+  computed: {
+    ...mapState(['listTmp'])
   }
 }
 </script>
