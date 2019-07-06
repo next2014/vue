@@ -1,4 +1,4 @@
-let list_data = [
+let listData = [
   {
     date: 'may 19 2018',
     title: '教育理念',
@@ -142,4 +142,4 @@ let list_data = [
   }
 ]
 
-export default {list_data}
+export default {listData}
