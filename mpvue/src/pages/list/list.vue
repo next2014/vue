@@ -33,7 +33,6 @@ export default {
  .listContainer swiper{
    width: 100%;
    height: 400rpx;
-
  }
  .listContainer swiper img{
    width: 100%;
