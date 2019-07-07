@@ -83,6 +83,5 @@ export default {
      line-height: 300rpx;
      text-align:  center;
      font-size: 26rpx;
-
  }
 </style>

@@ -19,6 +19,7 @@ module.exports = {
   ],
   // add your custom rules here
   'rules': {
+    "space-infix-ops": ["error", {"int32Hint": false}],
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
@@ -30,13 +31,8 @@ module.exports = {
     App: true,
     Page: true,
     wx: true,
-    swan: true,
-    tt: true,
-    my: true,
     getApp: true,
     getPage: true,
-    requirePlugin: true,
-    mpvue: true,
-    mpvuePlatform: true
+    requirePlugin: true
   }
 }
