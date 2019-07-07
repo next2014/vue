@@ -1,11 +1,11 @@
 <template>
-   <div class="tmpContainer">
+   <div @tap="toDetail" class="tmpContainer">
      <div class="avatar_date">
          <img :src="item.avatar" alt="">
          <span>{{item.date}}</span>
      </div>
      <p class="company">{{item.title}}</p>
-     <img class="detail_img" src="item.detail_img" alt="">
+     <img class="detail_img" :src="item.detail_img" alt="">
      <p class="content">{{item.detail_content}}</p>
      <div class="view_star_container">
          <img src="/static/images/icon/star.png" alt="">
@@ -18,9 +18,15 @@
 <script>
 export default {
   props: [
-    'item',
-    'index'
-  ]
+    'item', 'index'
+  ],
+  methods: {
+    toDetail () {
+      wx.navigateTo({
+        url: '/pages/detail/main?index=' + this.index
+      })
+    }
+  }
 }
 </script>
 
