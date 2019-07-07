@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/profile/profile"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F5F2E9",
+    "navigationBarTitleText": "未来社",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "sdkPlugin": {
+      "version": "2.0.8",
+      "provider": "wxc6b86e382a1e3294"
+    }
+  }
+}
