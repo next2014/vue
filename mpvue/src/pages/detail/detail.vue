@@ -1,6 +1,7 @@
 <template>
     <div class="detailContainer">
-       <img class="detail_img" :src="detailObj.detail_img" alt="">
+       <img class="detail_img" :src="isMusicPlay?detailObj.music.coverImgUrl:detailObj.detail_img" alt="">
+       <img @tap="handleMusicPlay" class="music_img" :src="isMusicPlay ? '/static/images/music/music-start.png' : '/static/images/music/music-stop.png'" alt="">
        <div class="avatar_date">
          <img :src="detailObj.avatar" alt="">
          <span>{{detailObj.author}}</span>
@@ -11,17 +12,18 @@
        <div class="collection_share_container">
         <div class="collection_share">
           <img @tap="handleCollection" :src="isCollected?'/static/images/icon/collection-anti.png':'/static/images/icon/collection.png'" alt="">
-          <img src="/static/images/icon/share-anti.png" alt="">
+          <img @tap="handleShare" src="/static/images/icon/share-anti.png" alt="">
         </div>
         <div class="line"></div>
        </div>
-       <Button>转发此文章</Button>
+       <Button open-type="share">转发此文章</Button>
        <p class="content">{{detailObj.detail_content}}</p>
     </div>
 </template>
 
 <script>
 import {mapState} from 'vuex'
+import isPlayObj from '../../datas/isPlay'
 export default {
   // onLoad (options) {
   //   console.log(options)
@@ -29,7 +31,8 @@ export default {
   data () {
     return {
       detailObj: {},
-      isCollected: false
+      isCollected: false,
+      isMusicPlay: false
     }
   },
   beforeMount () {
@@ -46,6 +49,20 @@ export default {
       // oldStorage[this.index]
       this.isCollected = oldStorage[this.index]
     }
+
+    isPlayObj.pageIndex === this.index && isPlayObj.isPlay ? this.isMusicPlay = true : this.isMusicPlay = false
+
+    wx.onBackgroundAudioPlay(() => {
+      console.log('音乐播放')
+      this.isMusicPlay = true
+      isPlayObj.pageIndex = this.index
+      isPlayObj.isPlay = true
+    })
+    wx.onBackgroundAudioPause(() => {
+      console.log('音乐暂停')
+      this.isMusicPlay = false
+      isPlayObj.isPlay = false
+    })
   },
   mounted () {
     console.log(this)
@@ -71,6 +88,26 @@ export default {
       wx.setStorage({
         key: 'isCollected',
         data: oldStorage
+      })
+    },
+    handleMusicPlay () {
+      let isMusicPlay = !this.isMusicPlay
+      this.isMusicPlay = isMusicPlay
+      let {dataUrl, title} = this.detailObj.music
+      if (isMusicPlay) {
+        wx.playBackgroundAudio({
+          dataUrl,
+          title
+        })
+      } else {
+        wx.pauseBackgroundAudio()
+      }
+    },
+    handleShare () {
+      wx.showActionSheet({
+        itemList: [
+          '分享到朋友圈', '分享到微博', '分享到好友'
+        ]
       })
     }
   }
