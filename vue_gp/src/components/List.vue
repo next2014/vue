@@ -5,14 +5,14 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 import Item from './Item.vue'
 export default {
   props: {
     comments: Array
   },
-
-  components: {
-    Item
+  computed: {
+    ...mapState(['Item'])
   }
 }
 </script>

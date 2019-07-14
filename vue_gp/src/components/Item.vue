@@ -1,5 +1,5 @@
 <template>
-    <li class="lists">
+    <li @tap="toDetail" class="lists">
         <div class="in_fl tic_img">
             <img :src="comment.img" alt="">
         </div>
@@ -15,6 +15,10 @@ export default {
   props: {
     comment: Object,
     index: Number
+  },
+  methods: {
+   toDetail () {
+   }
   }
 }
 </script>
