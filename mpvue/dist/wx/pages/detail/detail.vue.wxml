@@ -1,0 +1,18 @@
+<template name="308e6076">
+  <view class="_div data-v-92bc3422 detailContainer">
+    <image class="_img data-v-92bc3422 detail_img" src="{{isMusicPlay?detailObj.music.coverImgUrl:detailObj.detail_img}}" alt></image>
+    <image bindtap="handleProxy" class="_img data-v-92bc3422 music_img" src="{{isMusicPlay ? '/static/images/music/music-start.png' : '/static/images/music/music-stop.png'}}" alt data-eventid="{{'0'}}" data-comkey="{{$k}}"></image>
+    <view class="_div data-v-92bc3422 avatar_date">
+      <image src="{{detailObj.avatar}}" alt class="_img data-v-92bc3422"></image> <label class="_span data-v-92bc3422">{{detailObj.author}}</label> <label class="_span data-v-92bc3422">发布于</label> <label class="_span data-v-92bc3422">{{detailObj.date}}</label>
+    </view>
+    <view class="_p data-v-92bc3422 company">{{detailObj.title}}</view>
+    <view class="_div data-v-92bc3422 collection_share_container">
+      <view class="_div data-v-92bc3422 collection_share">
+        <image bindtap="handleProxy" src="{{isCollected?'/static/images/icon/collection-anti.png':'/static/images/icon/collection.png'}}" alt data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_img data-v-92bc3422"></image>
+        <image bindtap="handleProxy" src="/static/images/icon/share-anti.png" alt data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_img data-v-92bc3422"></image>
+      </view>
+      <view class="_div data-v-92bc3422 line"></view>
+    </view> <button open-type="share" class="_button data-v-92bc3422">转发此文章</button>
+    <view class="_p data-v-92bc3422 content">{{detailObj.detail_content}}</view>
+  </view>
+</template>
