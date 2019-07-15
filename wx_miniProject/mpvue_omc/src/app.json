@@ -1,0 +1,50 @@
+{
+   "pages": [
+      "pages/home/main",
+      "pages/movies/main",
+      "pages/movieDetail/main",
+      "pages/list/main",
+      "pages/detail/main",
+      "pages/index/main"
+   ],
+   "window": {
+     "navigationBarBackgroundColor": "#FDE024"
+   },
+   "tabBar": {
+      "position": "bottom",
+      "color": "#a9b7b7",
+      "selectedColor": "#333333",
+      "list": [
+         {
+            "iconPath": "/static/images/tab/1_15_13.jpg",
+            "selectedIconPath": "/static/images/tab/1_15_13.jpg",
+            "pagePath": "pages/home/main",
+            "text": "首页"
+         },
+         {
+            "iconPath": "/static/images/tab/1_15_15.jpg",
+            "selectedIconPath": "/static/images/tab/1_15_15.jpg",
+            "pagePath": "pages/home/main",
+            "text": "活动"
+         },
+         {
+            "iconPath": "/static/images/tab/1_15_17.jpg",
+            "selectedIconPath": "/static/images/tab/1_15_17.jpg",
+            "pagePath": "pages/home/main",
+            "text": "会员"
+         },
+         {
+            "iconPath": "/static/images/tab/1_15_19.jpg",
+            "selectedIconPath": "/static/images/tab/1_15_19.jpg",
+            "pagePath": "pages/home/main",
+            "text": "好评"
+         },
+         {
+            "iconPath": "/static/images/tab/1_15_21.jpg",
+            "selectedIconPath": "/static/images/tab/1_15_21.jpg",
+            "pagePath": "pages/home/main",
+            "text": "我的"
+         }
+      ]
+   }
+}
