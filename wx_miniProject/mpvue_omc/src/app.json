@@ -12,36 +12,36 @@
    },
    "tabBar": {
       "position": "bottom",
-      "color": "#a9b7b7",
-      "selectedColor": "#333333",
+      "color": "#B9B9B9",
+      "selectedColor": "#FF9800",
       "list": [
          {
-            "iconPath": "/static/images/tab/1_15_13.jpg",
-            "selectedIconPath": "/static/images/tab/1_15_13.jpg",
+            "iconPath": "/static/images/tab/home.png",
+            "selectedIconPath": "/static/images/tab/home_1.png",
             "pagePath": "pages/home/main",
             "text": "首页"
          },
          {
-            "iconPath": "/static/images/tab/1_15_15.jpg",
-            "selectedIconPath": "/static/images/tab/1_15_15.jpg",
+            "iconPath": "/static/images/tab/hd.png",
+            "selectedIconPath": "/static/images/tab/hd_1.png",
             "pagePath": "pages/home/main",
             "text": "活动"
          },
          {
-            "iconPath": "/static/images/tab/1_15_17.jpg",
-            "selectedIconPath": "/static/images/tab/1_15_17.jpg",
+            "iconPath": "/static/images/tab/huiyuan.png",
+            "selectedIconPath": "/static/images/tab/huiyuan_1.png",
             "pagePath": "pages/home/main",
             "text": "会员"
          },
          {
-            "iconPath": "/static/images/tab/1_15_19.jpg",
-            "selectedIconPath": "/static/images/tab/1_15_19.jpg",
+            "iconPath": "/static/images/tab/haoping.png",
+            "selectedIconPath": "/static/images/tab/haoping_1.png",
             "pagePath": "pages/home/main",
             "text": "好评"
          },
          {
-            "iconPath": "/static/images/tab/1_15_21.jpg",
-            "selectedIconPath": "/static/images/tab/1_15_21.jpg",
+            "iconPath": "/static/images/tab/me.png",
+            "selectedIconPath": "/static/images/tab/me_1.png",
             "pagePath": "pages/home/main",
             "text": "我的"
          }
