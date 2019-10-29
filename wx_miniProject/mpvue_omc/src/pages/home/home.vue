@@ -112,7 +112,9 @@
                </li>
             </ul>
          </div>
-         <div class="newHd_piao"></div>
+         <!-- <div class="newHd_piao">
+            fff
+         </div> -->
       </div>
    </div>
    <div class="module">
@@ -179,7 +181,7 @@
       <div class="newHd_tit">
          <div class="newHd_tit_l">
            <img src="/static/images/index/icon/noice.png" alt="">
-           <h2>欧欧主题酒店</h2>
+           <h2>奇奇主题酒店</h2>
            <div class="line"></div>
          </div>
          <div class="newHd_more">
@@ -370,7 +372,7 @@ export default {}
   }
   .newHd_con img{
      width: 100%;
-     height: 360rpx;
+     /* height: 360rpx; */
   }
   .newHd_con .newHd_con_tit{
      padding: 20rpx 20rpx 0 20rpx;
